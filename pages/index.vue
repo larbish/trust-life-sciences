@@ -17,64 +17,130 @@ defineOgImage({
 
 <template>
   <div>
-    <ULandingHero :title="page.hero.title" :description="page.hero.description" :links="page.hero.links">
-      <template #headline>
-        <UBadge v-if="page.hero.headline" variant="subtle" size="lg" class="relative rounded-full font-semibold">
-          <NuxtLink :to="page.hero.headline.to" target="_blank" class="focus:outline-none" tabindex="-1">
-            <span class="absolute inset-0" aria-hidden="true" />
-          </NuxtLink>
-
-          {{ page.hero.headline.label }}
-
-          <UIcon v-if="page.hero.headline.icon" :name="page.hero.headline.icon" class="ml-1 w-4 h-4 pointer-events-none" />
-        </UBadge>
+    <ULandingHero :description="page.hero.description" :ui="{ description: 'text-3xl', container: 'gap-16 sm:gap-y-12' }">
+      <template #title>
+        <span class="text-primary block lg:inline-block">TRUST</span> Life Sciences
       </template>
 
-      <Placeholder />
+      <div class="flex justify-center my-5">
+        <NuxtImg class="rounded-xl" src="/logo.png" alt="trust life sciences logo" width="200" height="200" />
+      </div>
 
-      <ULandingLogos :title="page.logos.title" align="center">
-        <UIcon v-for="icon in page.logos.icons" :key="icon" :name="icon" class="w-12 h-12 lg:w-16 lg:h-16 flex-shrink-0 text-gray-900 dark:text-white" />
-      </ULandingLogos>
+      <div class="flex justify-center w-full gap-x-6 gap-y-3">
+        <UButton label="Qui sommes nous ?" size="xl" to="/#about-us" />
+        <UButton label="Contactez nous" size="xl" icon="i-heroicons-phone" color="white" to="/#contact" />
+      </div>
     </ULandingHero>
 
-    <ULandingSection id="features" :title="page.features.title" :description="page.features.description" :headline="page.features.headline">
-      <UPageGrid>
+    <ULandingSection
+      id="about-us"
+      :title="page.about.title"
+      :features="[{
+        name: page.about.who.title,
+        description: page.about.who.description,
+        icon: page.about.who.icon
+      }, {
+        name: page.about.what.title,
+        description: page.about.what.description,
+        icon: page.about.what.icon
+      }]"
+      align="right"
+    >
+      <template #title>
+        <div>
+          À propos de <span class="text-primary block lg:inline-block">nous</span>
+        </div>
+      </template>
+      <NuxtImg
+        :src="page.about.img"
+        alt="Champs de Mars avec vue sur Tour Eiffel"
+        width="576"
+        height="384"
+        class="w-full rounded-md shadow-xl ring-1 ring-gray-300 dark:ring-gray-700"
+      />
+    </ULandingSection>
+
+    <ULandingSection
+      id="services"
+      :title="page.services.title"
+      :description="page.services.description"
+      class=""
+    >
+      <template #title>
+        <div>
+          Nos <span class="text-primary block lg:inline-block">Services</span>
+        </div>
+      </template>
+      <div class="flex gap-4">
+        <ULandingCard
+          v-for="item in page.services.items"
+          :key="item.title"
+          :ui="{ title: 'text-xl' }"
+          :title="item.title"
+          :description="item.description"
+          :icon="item.icon"
+          color="primary"
+          orientation="horizontal"
+        >
+          <NuxtImg
+            :src="item.img"
+            :alt="item.alt"
+            width="260"
+            height="180"
+            class="w-full rounded-md"
+          />
+        </ULandingCard>
+      </div>
+    </ULandingSection>
+
+    <ULandingSection
+      id="features"
+      :title="page.features.title"
+      :description="page.features.description"
+      :headline="page.features.headline"
+    >
+      <template #title>
+        Nos <span class="text-primary block lg:inline-block">Expertises </span> Métiers
+      </template>
+      <UPageGrid :ui="{ wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8' }">
         <ULandingCard v-for="(item, index) in page.features.items" :key="index" v-bind="item" />
       </UPageGrid>
     </ULandingSection>
 
-    <ULandingSection id="pricing" :title="page.pricing.title" :description="page.pricing.description" :headline="page.pricing.headline">
-      <UPricingGrid compact>
-        <UPricingCard v-for="(plan, index) in page.pricing.plans" :key="index" v-bind="plan" />
-      </UPricingGrid>
-    </ULandingSection>
-
-    <ULandingSection id="testimonials" :headline="page.testimonials.headline" :title="page.testimonials.title" :description="page.testimonials.description">
-      <UPageColumns class="xl:columns-4">
-        <div v-for="(testimonial, index) in page.testimonials.items" :key="index" class="break-inside-avoid">
-          <ULandingTestimonial v-bind="testimonial" />
+    <ULandingSection
+      id="partners"
+      :description="page.partners.description"
+      align="left"
+    >
+      <template #title>
+        Co-<span class="text-primary block lg:inline-block">fondateurs </span>
+      </template>
+      <template #description>
+        <div class="italic">
+          "{{ page.partners.description }}"
+          <div class="flex justify-end font-medium text-md mt-4">
+            Virginie Lleu & Matthieu Langrenay
+          </div>
         </div>
-      </UPageColumns>
-    </ULandingSection>
-
-    <ULandingSection class="bg-primary-50 dark:bg-primary-400 dark:bg-opacity-10">
-      <ULandingCTA v-bind="page.cta" :card="false" />
-    </ULandingSection>
-
-    <ULandingSection id="faq" :title="page.faq.title" :description="page.faq.description">
-      <ULandingFAQ
-        multiple
-        :items="page.faq.items"
-        :ui="{
-          button: {
-            label: 'font-semibold',
-            trailingIcon: {
-              base: 'w-6 h-6'
-            }
-          }
-        }"
-        class="max-w-4xl mx-auto"
-      />
+      </template>
+      <div class="flex justify-center">
+        <div class="flex flex-col gap-10">
+          <NuxtImg
+            class="rounded-md grayscale shadow-xl ring-1 ring-gray-300 dark:ring-gray-700 h-52 w-52"
+            :src="page.partners.imgOne"
+            alt="Premier cofondateur de Trust Life Sciences"
+            width="200"
+            height="200"
+          />
+          <NuxtImg
+            class="rounded-md grayscale shadow-xl ring-1 ring-gray-300 dark:ring-gray-700 h-52 w-52"
+            :src="page.partners.imgTwo"
+            alt="Deuxième cofondateur de Trust Life Sciences"
+            width="200"
+            height="200"
+          />
+        </div>
+      </div>
     </ULandingSection>
   </div>
 </template>
