@@ -19,14 +19,14 @@ defineOgImage({
   <div>
     <ULandingHero :description="page.hero.description" :ui="{ description: 'text-3xl', container: 'gap-16 sm:gap-y-12' }">
       <template #title>
-        <span class="text-primary block lg:inline-block">TRUST</span> Life Sciences
+        <span class="text-primary">TRUST</span> Life Sciences
       </template>
 
       <div class="flex justify-center my-5">
         <NuxtImg class="rounded-xl" src="/logo.png" alt="trust life sciences logo" width="200" height="200" />
       </div>
 
-      <div class="flex justify-center w-full gap-x-6 gap-y-3">
+      <div class="flex justify-center w-full gap-x-6 gap-y-3 px-6">
         <UButton label="Qui sommes nous ?" size="xl" to="/#about-us" />
         <UButton label="Contactez nous" size="xl" icon="i-heroicons-phone" color="white" to="/#contact" />
       </div>
@@ -48,7 +48,7 @@ defineOgImage({
     >
       <template #title>
         <div>
-          À propos de <span class="text-primary block lg:inline-block">nous</span>
+          À propos de <span class="text-primary">nous</span>
         </div>
       </template>
       <NuxtImg
@@ -64,14 +64,13 @@ defineOgImage({
       id="services"
       :title="page.services.title"
       :description="page.services.description"
-      class=""
     >
       <template #title>
         <div>
-          Nos <span class="text-primary block lg:inline-block">Services</span>
+          Nos <span class="text-primary">Services</span>
         </div>
       </template>
-      <div class="flex gap-4">
+      <div class="flex flex-col sm:flex-row gap-4">
         <ULandingCard
           v-for="item in page.services.items"
           :key="item.title"
@@ -100,7 +99,7 @@ defineOgImage({
       :headline="page.features.headline"
     >
       <template #title>
-        Nos <span class="text-primary block lg:inline-block">Expertises </span> Métiers
+        Nos <span class="text-primary">Expertises </span> Métiers
       </template>
       <UPageGrid :ui="{ wrapper: 'grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8' }">
         <ULandingCard v-for="(item, index) in page.features.items" :key="index" v-bind="item" />
@@ -113,13 +112,13 @@ defineOgImage({
       align="left"
     >
       <template #title>
-        Co-<span class="text-primary block lg:inline-block">fondateurs </span>
+        Co-<span class="text-primary">fondateurs </span>
       </template>
       <template #description>
         <div class="italic">
           "{{ page.partners.description }}"
           <div class="flex justify-end font-medium text-md mt-4">
-            Virginie Lleu & Matthieu Langrenay
+            Virginie Lleu &nbsp; & &nbsp; Matthieu Langrenay
           </div>
         </div>
       </template>

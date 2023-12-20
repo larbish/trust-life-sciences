@@ -2,22 +2,22 @@
 const links = [{
   label: 'À propos de nous',
   to: '#about-us',
-  icon: 'i-heroicons-cube-transparent',
+  icon: 'i-mdi-account-circle',
   exactHash: true
 }, {
   label: 'Nos services',
   to: '#services',
-  icon: 'i-heroicons-credit-card',
+  icon: 'i-mdi-format-list-bulleted',
   exactHash: true
 }, {
   label: 'Nos expertises métiers',
   to: '#features',
-  icon: 'i-heroicons-academic-cap',
+  icon: 'i-mdi-head-lightbulb-outline',
   exactHash: true
 }, {
   label: 'Fondateurs',
   to: '#partners',
-  icon: 'i-heroicons-question-mark-circle',
+  icon: 'i-mdi-account-supervisor',
   exactHash: true
 }
 // {
@@ -36,12 +36,16 @@ const links = [{
     </template>
 
     <template #panel>
-      <UAsideLinks :links="links" />
+      <UAsideLinks :links="links" :ui="{ label: 'text-lg' }" />
 
-      <UDivider class="my-6" />
+      <!-- <UDivider class="my-6" />
 
       <UButton label="Sign in" color="white" block class="mb-3" />
-      <UButton label="Get started" block />
+      <UButton label="Get started" block /> -->
+    </template>
+
+    <template #right>
+      <UColorModeButton size="sm" />
     </template>
   </UHeader>
 </template>

@@ -48,7 +48,7 @@ features:
   title: Nos expertises métiers
   items:
     - title: Affaires Réglementaires
-      description: "Chargé(e) et pharmacien affaires réglementaires, responsable affaires réglementaires : enregistrement, life cycle management, CMC, contrôle publicité..."
+      description: "Chargé(e) et pharmacien affaires réglementaires, responsable affaires réglementaires : enregistrement, life cycle management, CMC, contrôle publicité."
       icon: i-mdi-clipboard-text-multiple-outline
     - title: Opérations Cliniques
       description: Gestionnaire d'essais cliniques, study start-up, coordinateur d'essais cliniques, attaché(e) de recherche clinique, chef de projet clinique, médecin essais cliniques.
@@ -60,15 +60,15 @@ features:
       description: Chargé(e) et pharmacien assurance qualité, responsable assurance qualité (site exploitant et site de production).
       icon: i-mdi-heart-pulse
     - title: Biométrie
-      description: Biostatisticiens, data manager, programmeur SAS etc...
+      description: Biostatisticiens, data manager, programmeur.
       icon: i-mdi-chart-box-outline
     - title: SFE
-      description: Business analyst
+      description: Business analyst, market research analyst, customer engagement analyst.
       icon: i-mdi-chart-box-outline
 
 partners:
   title: Co-fondateurs
-  description: "TRUST Life Sciences est un cabinet de conseil et de recrutement qui souhaite créer un lien de confiance sur le long terme avec l'ensemble de ses candidats, clients et consultants."
+  description: "TRUST Life Sciences est un cabinet de conseil et de recrutement qui souhaite créer un lien de confiance sur le long terme avec l'ensemble de ses candidats, consultants et clients."
   imgOne: /matthieu-langrenay.jpeg
   imgTwo: /virginie-lleu.jpeg
 
