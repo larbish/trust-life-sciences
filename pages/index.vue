@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import type { FormError, FormSubmitEvent } from '#ui/types'
+
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 
 useSeoMeta({
@@ -13,6 +15,28 @@ defineOgImage({
   title: page.value.title,
   description: page.value.description
 })
+
+const form = reactive({
+  name: undefined,
+  email: undefined,
+  phone: undefined,
+  message: undefined
+})
+
+const validate = (state: any): FormError[] => {
+  const errors = []
+  if (!state.email) errors.push({ path: 'email', message: 'Required' })
+  if (!state.name) errors.push({ path: 'name', message: 'Required' })
+  if (!state.phone) errors.push({ path: 'phone', message: 'Required' })
+  if (!state.message) errors.push({ path: 'message', message: 'Required' })
+
+  return errors
+}
+
+async function onSubmit (event: FormSubmitEvent<any>) {
+  // Do something with data
+  console.log(event.data)
+}
 </script>
 
 <template>
@@ -141,5 +165,42 @@ defineOgImage({
         </div>
       </div>
     </ULandingSection>
+
+    <ULandingSection :ui="{ title: 'sm:!text-3xl' }">
+      <template #title>
+        Ils nous font <span class="text-primary">confiance</span>
+      </template>
+      <ULandingLogos align="center">
+        <NuxtImg src="/servier.png" height="50" />
+        <NuxtImg src="/roche.png" height="50" />
+        <NuxtImg src="/astellas.png" height="50" />
+        <NuxtImg src="/ipsen.png" height="50" />
+        <NuxtImg src="/LFB.png" height="50" />
+      </ULandingLogos>
+    </ULandingSection>
+
+
+    <!-- <ULandingSection title="Nous contacter">
+      <div class="flex justify-center">
+        <UForm :validate="validate" :state="form" class="w-1/2 space-y-4" @submit="onSubmit">
+          <UFormGroup label="Votre nom" name="name">
+            <UInput v-model="form.name" placeholder="Jean Dupond" icon="i-heroicons-user" size="lg" />
+          </UFormGroup>
+          <UFormGroup label="Your email" name="email">
+            <UInput v-model="form.email" placeholder="you@example.com" icon="i-heroicons-envelope" size="lg" />
+          </UFormGroup>
+          <UFormGroup label="Votre téléphone" name="phone">
+            <UInput v-model="form.phone" placeholder="0612345678" icon="i-heroicons-phone" size="lg" />
+          </UFormGroup>
+          <UFormGroup name="message" label="Message">
+            <UTextarea v-model="form.message" />
+          </UFormGroup>
+
+          <div>
+            <UButton type="submit" class="mt-4" label="Envoyer" size="xl" />
+          </div>
+        </UForm>
+      </div>
+    </ULandingSection> -->
   </div>
 </template>

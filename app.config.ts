@@ -18,7 +18,7 @@ export default defineAppConfig({
       }
     },
     input: {
-      rounded: 'rounded-full'
+      rounded: 'rounded-md'
     },
     header: {
       wrapper: 'lg:!border-transparent bg-gray-50 dark:bg-gray-950',

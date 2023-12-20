@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/fontaine',
     '@nuxtjs/google-fonts',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    // 'nuxt-mail'
   ],
   ui: {
     icons: ['heroicons', 'simple-icons', 'mdi'],
