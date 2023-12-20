@@ -166,7 +166,7 @@ async function onSubmit (event: FormSubmitEvent<any>) {
       </div>
     </ULandingSection>
 
-    <ULandingSection :ui="{ title: 'sm:!text-3xl' }">
+    <!-- <ULandingSection :ui="{ title: 'sm:!text-3xl' }">
       <template #title>
         Ils nous font <span class="text-primary">confiance</span>
       </template>
@@ -177,7 +177,7 @@ async function onSubmit (event: FormSubmitEvent<any>) {
         <NuxtImg src="/ipsen.png" height="50" />
         <NuxtImg src="/LFB.png" height="50" />
       </ULandingLogos>
-    </ULandingSection>
+    </ULandingSection> -->
 
 
     <!-- <ULandingSection title="Nous contacter">
