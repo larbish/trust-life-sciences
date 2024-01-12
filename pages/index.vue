@@ -149,14 +149,14 @@ async function onSubmit (event: FormSubmitEvent<any>) {
       <div class="flex justify-center">
         <div class="flex flex-col gap-10">
           <NuxtImg
-            class="rounded-md grayscale shadow-xl ring-1 ring-gray-300 dark:ring-gray-700 h-52 w-52"
+            class="rounded-md grayscale shadow-xl ring-1 ring-gray-300 dark:ring-gray-700"
             :src="page.partners.imgOne"
             alt="Premier cofondateur de Trust Life Sciences"
             width="200"
             height="200"
           />
           <NuxtImg
-            class="rounded-md grayscale shadow-xl ring-1 ring-gray-300 dark:ring-gray-700 h-52 w-52"
+            class="rounded-md grayscale shadow-xl ring-1 ring-gray-300 dark:ring-gray-700"
             :src="page.partners.imgTwo"
             alt="Deuxième cofondateur de Trust Life Sciences"
             width="200"
