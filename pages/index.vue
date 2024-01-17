@@ -10,10 +10,10 @@ useSeoMeta({
   ogDescription: page.value.description
 })
 
-defineOgImage({
-  component: 'Landing',
-  title: page.value.title,
-  description: page.value.description
+defineOgImageComponent('NuxtSeo', {
+  title: 'TRUST Life Sciences',
+  description: 'Cabinet de conseil et de recrutement spécialisé dans l\'industrie de la santé',
+  theme: '#0e5b61'
 })
 
 const form = reactive({
