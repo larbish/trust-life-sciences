@@ -181,11 +181,11 @@ const form = reactive({
         Ils nous font <span class="text-primary">confiance</span>
       </template>
       <ULandingLogos align="center">
-        <NuxtImg src="/servier.png" height="50" width="196" preload />
-        <NuxtImg src="/roche.png" height="50" width="95" preload />
-        <NuxtImg src="/astellas.png" height="50" width="182" preload />
-        <NuxtImg src="/ipsen.png" height="50" width="173" preload />
-        <NuxtImg src="/LFB.png" height="50" width="171" preload />
+        <NuxtImg src="/servier.png" height="50" width="196" />
+        <NuxtImg src="/roche.png" height="50" width="95" />
+        <NuxtImg src="/astellas.png" height="50" width="182" />
+        <NuxtImg src="/ipsen.png" height="50" width="173" />
+        <NuxtImg src="/LFB.png" height="50" width="171" />
       </ULandingLogos>
     </ULandingSection>
 
