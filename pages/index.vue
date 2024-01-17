@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import type { FormError, FormSubmitEvent } from '#ui/types'
 
+// const mail = useMail()
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 
 useSeoMeta({
@@ -34,8 +35,12 @@ const validate = (state: any): FormError[] => {
 }
 
 async function onSubmit (event: FormSubmitEvent<any>) {
-  // Do something with data
   console.log(event.data)
+  // mail.send({
+  //   from: 'John Doe',
+  //   subject: 'Incredible',
+  //   text: 'This is an incredible test message',
+  // })
 }
 </script>
 
@@ -166,23 +171,23 @@ async function onSubmit (event: FormSubmitEvent<any>) {
       </div>
     </ULandingSection>
 
-    <ULandingSection :ui="{ title: 'sm:!text-3xl' }">
+    <ULandingSection :ui="{ title: 'sm:!text-4xl' }">
       <template #title>
         Ils nous font <span class="text-primary">confiance</span>
       </template>
       <ULandingLogos align="center">
-        <NuxtImg src="/servier.png" height="50" />
-        <NuxtImg src="/roche.png" height="50" />
-        <NuxtImg src="/astellas.png" height="50" />
-        <NuxtImg src="/ipsen.png" height="50" />
-        <NuxtImg src="/LFB.png" height="50" />
+        <NuxtImg src="/servier.png" height="50" width="196" preload />
+        <NuxtImg src="/roche.png" height="50" width="95" preload />
+        <NuxtImg src="/astellas.png" height="50" width="182" preload />
+        <NuxtImg src="/ipsen.png" height="50" width="173" preload />
+        <NuxtImg src="/LFB.png" height="50" width="171" preload />
       </ULandingLogos>
     </ULandingSection>
 
 
     <!-- <ULandingSection title="Nous contacter">
       <div class="flex justify-center">
-        <UForm :validate="validate" :state="form" class="w-1/2 space-y-4" @submit="onSubmit">
+        <UForm :state="form" class="w-1/2 space-y-4" @submit="onSubmit">
           <UFormGroup label="Votre nom" name="name">
             <UInput v-model="form.name" placeholder="Jean Dupond" icon="i-heroicons-user" size="lg" />
           </UFormGroup>
