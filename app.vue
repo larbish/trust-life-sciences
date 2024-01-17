@@ -22,6 +22,8 @@ useSeoMeta({
 
   <UMain>
     <NuxtPage />
+
+    <UNotifications />
   </UMain>
 
   <Footer />

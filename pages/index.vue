@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import type { FormError, FormSubmitEvent } from '#ui/types'
+import type { FormSubmitEvent } from '#ui/types'
 
 // const mail = useMail()
+// const toast = useToast()
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
 
 useSeoMeta({
@@ -24,24 +25,27 @@ const form = reactive({
   message: undefined
 })
 
-const validate = (state: any): FormError[] => {
-  const errors = []
-  if (!state.email) errors.push({ path: 'email', message: 'Required' })
-  if (!state.name) errors.push({ path: 'name', message: 'Required' })
-  if (!state.phone) errors.push({ path: 'phone', message: 'Required' })
-  if (!state.message) errors.push({ path: 'message', message: 'Required' })
 
-  return errors
-}
+// const validate = (state: any): FormError[] => {
+//   const errors = []
+//   if (!state.email) errors.push({ path: 'email', message: 'Required' })
+//   if (!state.name) errors.push({ path: 'name', message: 'Required' })
+//   if (!state.phone) errors.push({ path: 'phone', message: 'Required' })
+//   if (!state.message) errors.push({ path: 'message', message: 'Required' })
 
-async function onSubmit (event: FormSubmitEvent<any>) {
-  console.log(event.data)
-  // mail.send({
-  //   from: 'John Doe',
-  //   subject: 'Incredible',
-  //   text: 'This is an incredible test message',
-  // })
-}
+//   return errors
+// }
+
+// async function onSubmit (event: FormSubmitEvent<any>) {
+//   console.log(event.data)
+//   const res = await mail.send({
+//     from: 'John Doe',
+//     subject: 'Incredible',
+//     text: 'This is an incredible test message',
+//   })
+//   console.log('res :', res)
+//   toast.add({ title: 'Email sent!' })
+// }
 </script>
 
 <template>
@@ -137,19 +141,20 @@ async function onSubmit (event: FormSubmitEvent<any>) {
 
     <ULandingSection
       id="partners"
-      :description="page.partners.description"
       align="left"
     >
       <template #title>
         Co-<span class="text-primary">fondateurs </span>
       </template>
       <template #description>
-        <div class="italic">
+        <span class="italic">
           "{{ page.partners.description }}"
-          <div class="flex justify-end font-medium text-md mt-4">
-            Virginie Lleu &nbsp; & &nbsp; Matthieu Langrenay
-          </div>
-        </div>
+        </span>
+      </template>
+      <template #links>
+        <span class="w-full flex justify-end font-medium text-md mt-4">
+          Virginie Lleu &nbsp; & &nbsp; Matthieu Langrenay
+        </span>
       </template>
       <div class="flex justify-center">
         <div class="flex flex-col gap-10">
