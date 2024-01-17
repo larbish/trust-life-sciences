@@ -12,7 +12,7 @@ useSeoMeta({
 
 defineOgImageComponent('NuxtSeo', {
   title: 'TRUST Life Sciences',
-  description: 'Cabinet de conseil et de recrutement spécialisé dans l\'industrie de la santé',
+  description: 'Cabinet de conseil et de recrutement spécialisé dans la santé',
   theme: '#0e5b61'
 })
 
@@ -166,7 +166,7 @@ async function onSubmit (event: FormSubmitEvent<any>) {
       </div>
     </ULandingSection>
 
-    <!-- <ULandingSection :ui="{ title: 'sm:!text-3xl' }">
+    <ULandingSection :ui="{ title: 'sm:!text-3xl' }">
       <template #title>
         Ils nous font <span class="text-primary">confiance</span>
       </template>
@@ -177,7 +177,7 @@ async function onSubmit (event: FormSubmitEvent<any>) {
         <NuxtImg src="/ipsen.png" height="50" />
         <NuxtImg src="/LFB.png" height="50" />
       </ULandingLogos>
-    </ULandingSection> -->
+    </ULandingSection>
 
 
     <!-- <ULandingSection title="Nous contacter">

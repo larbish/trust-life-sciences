@@ -1,5 +1,5 @@
 title: Cabinet de conseil et de recrutement TRUST Life Scicences
-description: "Nous sommes un cabinet de conseil et de recrutement spécialisé dans l'industrie de la santé: Pharmaceutique, Dispositifs Médicaux, Biotechnologie et Cosmétique"
+description: "Nous sommes un cabinet de conseil et de recrutement spécialisé dans la santé: Pharmaceutique, Dispositifs Médicaux, Biotechnologie et Cosmétique"
 hero:
   title: TRUST Life Sciences
   description: Votre confiance, notre atout majeur.
@@ -23,7 +23,7 @@ about:
   alt: 'Champs de Mars avec vue sur la Tour Eiffel'
   who:
     title: Qui sommes nous?
-    description: Situé à Paris au Trocadéro, nous sommes un cabinet de conseil et de recrutement spécialisé dans l'industrie de la santé (Pharmaceutique, Dispositifs Médicaux et Biotechnologie).
+    description: Situé à Paris au Trocadéro, nous sommes un cabinet de conseil et de recrutement spécialisé dans la santé (Pharmaceutique, Dispositifs Médicaux et Biotechnologie).
     icon: i-mdi-account-supervisor
   what:
     title: Dans quels domaines?
@@ -55,13 +55,13 @@ features:
       icon: i-mdi-test-tube-empty
     - title: Pharmacovigilance / Matériovigilance
       description: Gestionnaire de base de données, chargé(e) et pharmacien vigilance, médecin vigilance.
-      icon: i-mdi-chart-areaspline
+      icon: i-mdi-security
     - title: Assurance Qualité
       description: Chargé(e) et pharmacien assurance qualité, responsable assurance qualité (site exploitant et site de production).
       icon: i-mdi-heart-pulse
     - title: Biométrie
-      description: Biostatisticiens, data manager, programmeur.
-      icon: i-mdi-chart-box-outline
+      description: Biostatisticiens, data manager, programmeur SAS.
+      icon: i-mdi-google-analytics
     - title: SFE
       description: Business analyst, market research analyst, customer engagement analyst.
       icon: i-mdi-chart-box-outline
