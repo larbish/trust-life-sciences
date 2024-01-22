@@ -4,7 +4,7 @@ useHead({
     { name: 'viewport', content: 'width=device-width, initial-scale=1' }
   ],
   link: [
-    { rel: 'icon', href: '/logo.png' }
+    { rel: 'icon', type: 'image/x-icon', href: '/logo.png' }
   ],
   htmlAttrs: {
     lang: 'en'
@@ -12,7 +12,7 @@ useHead({
 })
 
 useSeoMeta({
-  ogSiteName: 'Nuxt UI Pro - Landing template',
+  ogSiteName: 'TRUST Life Scicences - Cabinet de conseil et recrutement',
   twitterCard: 'summary_large_image'
 })
 </script>

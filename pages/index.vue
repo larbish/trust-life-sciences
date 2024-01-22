@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import type { FormSubmitEvent } from '#ui/types'
-
 // const mail = useMail()
 // const toast = useToast()
 const { data: page } = await useAsyncData('index', () => queryContent('/').findOne())
@@ -18,12 +16,12 @@ defineOgImageComponent('NuxtSeo', {
   theme: '#0e5b61'
 })
 
-const form = reactive({
-  name: undefined,
-  email: undefined,
-  phone: undefined,
-  message: undefined
-})
+// const form = reactive({
+//   name: undefined,
+//   email: undefined,
+//   phone: undefined,
+//   message: undefined
+// })
 
 
 // const validate = (state: any): FormError[] => {
