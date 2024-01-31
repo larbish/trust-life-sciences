@@ -12,7 +12,7 @@ useHead({
 })
 
 useSeoMeta({
-  ogSiteName: 'TRUST Life Scicences - Cabinet de conseil et recrutement',
+  ogSiteName: 'TRUST Life Sciences - Cabinet de conseil et recrutement',
   twitterCard: 'summary_large_image'
 })
 </script>

@@ -13,7 +13,7 @@ export default defineNuxtConfig({
   ],
   site: {
     url: 'https://trust-ls.fr',
-    name: 'TRUST Life Scicences',
+    name: 'TRUST Life Sciences',
     description: 'Nous sommes un cabinet de conseil et de recrutement spécialisé dans l\'industrie de la santé: Pharmaceutique, Dispositifs Médicaux, Biotechnologie et Cosmétique.',
     defaultLocale: 'fr',
   },
