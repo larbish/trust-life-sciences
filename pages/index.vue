@@ -59,7 +59,7 @@ defineOgImageComponent('NuxtSeo', {
 
       <div class="flex justify-center w-full gap-x-6 gap-y-3 px-6">
         <UButton label="Qui sommes nous ?" size="xl" to="/#about-us" />
-        <UButton label="Contactez nous" size="xl" icon="i-heroicons-phone" color="white" to="/#contact" />
+        <UButton label="Contactez nous" size="xl" icon="i-heroicons-phone" color="white" />
       </div>
     </ULandingHero>
 
