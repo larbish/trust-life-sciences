@@ -62,7 +62,7 @@ features:
     - title: Biométrie
       description: Biostatisticiens, data manager, programmeur SAS.
       icon: i-mdi-google-analytics
-    - title: SFE
+    - title: SFE / BI
       description: Business analyst, market research analyst, customer engagement analyst.
       icon: i-mdi-chart-box-outline
 
